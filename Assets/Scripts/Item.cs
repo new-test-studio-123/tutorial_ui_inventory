@@ -24,6 +24,7 @@ public class Item {
         this.description = item.description;
         this.icon = Resources.Load<Sprite>("Sprites/Items/" + item.title);
         this.stats = item.stats;
+        this.x = 3443;
     }
 
     
