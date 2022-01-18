@@ -9,7 +9,7 @@ public class UIInventory : MonoBehaviour
    public Transform slotPanel;
 
    void Awake () {
-       for(int i = 0; i < 30; i++) {
+       for(int i = 0; i < 24; i++) {
            GameObject instance = Instantiate(slotPrefab);
            instance.transform.SetParent(slotPanel);
            uiItems.Add(instance.GetComponentInChildren<UIItem>());
@@ -27,6 +27,6 @@ public class UIInventory : MonoBehaviour
    }
 
    public void RemoveItem(Item item) {
-       UpdateSlot(uiItems.FindIndex(i => i.item == null), null); 
+       UpdateSlot(uiItems.FindIndex(i => i.item == item), null); 
    }
 }

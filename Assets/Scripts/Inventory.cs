@@ -12,13 +12,14 @@ public class Inventory : MonoBehaviour
     void Start() {
         GiveItem(0);
         GiveItem(1);
-        RemoveItem(0);
+        
     }
     public void GiveItem(int id) {
         Item itemToAdd = itemDatabase.GetItem(id);
         characterItems.Add(itemToAdd);
         inventoryUI.AddNewItem(itemToAdd);
-        Debug.Log("Added item: " + itemToAdd.title);
+        //Debug.Log("Added item: " + itemToAdd.title);
+        Debug.Log("Added item sprite: " + itemToAdd.icon);
 
     }
 
